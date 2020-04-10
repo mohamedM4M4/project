@@ -8,7 +8,7 @@ using System.Data.Entity;
 
 namespace Clinic.DBContext
 {
-    class ClinicDBContext : DbContext
+   public class ClinicDBContext : DbContext
     {
 
         public ClinicDBContext() : base("data source=.; database=Clinic; integrated security=true")

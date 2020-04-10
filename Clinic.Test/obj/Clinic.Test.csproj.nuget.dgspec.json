@@ -1,0 +1,97 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Moneim\\Desktop\\Current\\project\\Clinic.Test\\Clinic.Test.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Moneim\\Desktop\\Current\\project\\Clinic.Test\\Clinic.Test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Moneim\\Desktop\\Current\\project\\Clinic.Test\\Clinic.Test.csproj",
+        "projectName": "Clinic.Test",
+        "projectPath": "C:\\Users\\Moneim\\Desktop\\Current\\project\\Clinic.Test\\Clinic.Test.csproj",
+        "packagesPath": "C:\\Users\\Moneim\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Moneim\\Desktop\\Current\\project\\Clinic.Test\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Moneim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {
+              "C:\\Users\\Moneim\\Desktop\\Current\\project\\Clinic\\Clinic.csproj": {
+                "projectPath": "C:\\Users\\Moneim\\Desktop\\Current\\project\\Clinic\\Clinic.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.2.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.13.1, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.13.0, )"
+            },
+            "nunit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Moneim\\Desktop\\Current\\project\\Clinic\\Clinic.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Moneim\\Desktop\\Current\\project\\Clinic\\Clinic.csproj",
+        "projectName": "Clinic",
+        "projectPath": "C:\\Users\\Moneim\\Desktop\\Current\\project\\Clinic\\Clinic.csproj"
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    }
+  }
+}
