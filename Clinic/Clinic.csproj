@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{33D53EC7-8504-41F3-A26F-C7CB6BE2310B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Clinic</RootNamespace>
+    <AssemblyName>Clinic</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL\AppointmentRepository.cs" />
+    <Compile Include="DAL\AssistantRepository.cs" />
+    <Compile Include="DAL\ClinicRepository.cs" />
+    <Compile Include="DAL\DoctorRepository.cs" />
+    <Compile Include="DAL\Encryption.cs" />
+    <Compile Include="DAL\MedicineRepository.cs" />
+    <Compile Include="DAL\PatientRepository.cs" />
+    <Compile Include="DAL\PermissionsDAL.cs" />
+    <Compile Include="DAL\UserDAL.cs" />
+    <Compile Include="DBContext\ClinicDBContext.cs" />
+    <Compile Include="Design Helper\ClassModel.cs" />
+    <Compile Include="Forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBackup.Designer.cs">
+      <DependentUpon>frmBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReservation.designer.cs">
+      <DependentUpon>frmReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMenu.designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004101226242_databbase.cs" />
+    <Compile Include="Migrations\202004101226242_databbase.designer.cs">
+      <DependentUpon>202004101226242_databbase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Appointment.cs" />
+    <Compile Include="Model\AppointmentType.cs" />
+    <Compile Include="Model\Assistant.cs" />
+    <Compile Include="Model\Clinic.cs" />
+    <Compile Include="Model\Doctor.cs" />
+    <Compile Include="Model\Gender.cs" />
+    <Compile Include="Model\Medicine.cs" />
+    <Compile Include="Model\Patient.cs" />
+    <Compile Include="Model\Permissions.cs" />
+    <Compile Include="Model\Prescription.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Report\PrescreptionReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrescreptionReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="User Control\ctrMedicine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\ctrMedicine.designer.cs">
+      <DependentUpon>ctrMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\ctrArchive.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\ctrArchive.designer.cs">
+      <DependentUpon>ctrArchive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\ctrPrescreption.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\ctrPrescreption.designer.cs">
+      <DependentUpon>ctrPrescreption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\ctrMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\ctrMain.designer.cs">
+      <DependentUpon>ctrMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User Control\ctrSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\ctrSearch.designer.cs">
+      <DependentUpon>ctrSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\ctrExamin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\ctrExamin.designer.cs">
+      <DependentUpon>ctrExamin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\ctrBackup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\ctrBackup.designer.cs">
+      <DependentUpon>ctrBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\ctrUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\ctrUsers.designer.cs">
+      <DependentUpon>ctrUsers.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBackup.resx">
+      <DependentUpon>frmBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReservation.resx">
+      <DependentUpon>frmReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004101226242_databbase.resx">
+      <DependentUpon>202004101226242_databbase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PrescreptionReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PrescreptionReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\ctrMedicine.resx">
+      <DependentUpon>ctrMedicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\ctrArchive.resx">
+      <DependentUpon>ctrArchive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\ctrPrescreption.resx">
+      <DependentUpon>ctrPrescreption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\ctrMain.resx">
+      <DependentUpon>ctrMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="User Control\ctrSearch.resx">
+      <DependentUpon>ctrSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\ctrExamin.resx">
+      <DependentUpon>ctrExamin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\ctrBackup.resx">
+      <DependentUpon>ctrBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\ctrUsers.resx">
+      <DependentUpon>ctrUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\close.png" />
+    <Content Include="Images\icons8-hand-with-a-pill-70.png" />
+    <Content Include="Images\patient.png" />
+    <Content Include="Images\search.png" />
+    <None Include="Resources\icons8-health-checkup-96.png" />
+    <None Include="Resources\icons8-being-sick-80.png" />
+    <None Include="Resources\icons8-pill-100.png" />
+    <None Include="Resources\icons8-database-restore-90.png" />
+    <None Include="Resources\icons8-data-backup-90.png" />
+    <None Include="Resources\icons8-edit-251.png" />
+    <None Include="Resources\icons8-enter-25 %281%29.png" />
+    <None Include="Resources\icons8-edit-25.png" />
+    <None Include="Resources\icons8-delete-25.png" />
+    <None Include="Resources\rsz_7-doctor-and-nurse-visiting-patient-cartoon-clipart-removebg-preview.png" />
+    <None Include="Resources\rsz_7-doctor-and-nurse-visiting-patient-cartoon-clipart.jpg" />
+    <None Include="Resources\rsz_7-doctor-and-nurse-visiting-patient-cartoon-clipart-removebg-preview_2.png" />
+    <None Include="Resources\prescription.png" />
+    <None Include="Resources\icons8-user-group-70.png" />
+    <None Include="Resources\permissions.png" />
+    <None Include="Resources\back-up.png" />
+    <None Include="Resources\icons8-archive-folder-701.png" />
+    <None Include="Resources\icons8-archive-folder-70 %281%29.png" />
+    <None Include="Resources\icons8-archive-folder-70.png" />
+    <None Include="Resources\icons8-hand-with-a-pill-70.png" />
+    <None Include="Resources\medicine.png" />
+    <None Include="Resources\pharmacy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+</Project>
